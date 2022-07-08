@@ -20,4 +20,19 @@
         </createTable>
     </changeSet>
 
+    <changeSet id="changelog-1.1" author="geonhee">
+        <createTable tableName="team-test">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="changelog-1.2" author="geonhee">
+        <dropColumn tableName="test-table" columnName="reg_date"/>
+    </changeSet>
+
 </databaseChangeLog>
